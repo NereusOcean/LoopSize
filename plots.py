@@ -96,13 +96,3 @@ if __name__ == '__main__':
 
 
 
-   # bol = 0
-
-      #  now = datetime.datetime.now()
-        #if update_id == last_update(get_updates_json(url))['update_id']:
-          #  if now.isoweekday() == 3:
-          #      if bol == 0:
-           #         send_mess(get_chat_id(last_update(get_updates_json(url))),"https://www.youtube.com/watch?v=Oct2xKMGOno")
-          #          update_id += 1
-          #          bol = 1
-        #    else: bol = 0
