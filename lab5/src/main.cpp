@@ -243,7 +243,7 @@ public:
         std::cin >> word;
         std::cin >> joker;
 
-        std::vector<int> result(txt.length(), 0);
+        std::vector<int> res(txt.length(), 0);
         std::vector<std::string> patterns;
         std::vector<int> index;
         int j = 0;
@@ -267,15 +267,15 @@ public:
                 for (auto point : pats) {
                     int firstLetter = pos - patterns[point].length() + 1;
                     int idx = firstLetter - index[point] + 1;
-                    if (idx >= 0 && idx < result.size()) {
-                        result[firstLetter - index[point] + 1]++;
+                    if (idx >= 0 && idx < res.size()) {
+                        res[firstLetter - index[point] + 1]++;
                     }
                 }
             }
         }
 
-        for (int indexOfAnswer = 0; indexOfAnswer < result.size() - word.size() + 2; indexOfAnswer++) {
-            if (result[indexOfAnswer] == patterns.size()) {
+        for (int indexOfAnswer = 0; indexOfAnswer < res.size() - word.size() + 2; indexOfAnswer++) {
+            if (res[indexOfAnswer] == patterns.size()) {
                 std::cout << indexOfAnswer << std::endl;
             }
         }
